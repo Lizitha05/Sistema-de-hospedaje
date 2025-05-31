@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAD", "MAD\MAD.csproj", "{B936B597-56BF-44F4-9DEC-3BDA1A80337E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{F26DA2F8-4AC0-4079-9E7B-00271D559F6E}"
+	ProjectSection(SolutionItems) = preProject
+		MAD\EnlaceDB.cs = MAD\EnlaceDB.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B936B597-56BF-44F4-9DEC-3BDA1A80337E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B936B597-56BF-44F4-9DEC-3BDA1A80337E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B936B597-56BF-44F4-9DEC-3BDA1A80337E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B936B597-56BF-44F4-9DEC-3BDA1A80337E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {603D40FB-7300-4BF4-B0D0-50D903D2F2D2}
+	EndGlobalSection
+EndGlobal
