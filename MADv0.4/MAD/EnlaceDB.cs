@@ -31,6 +31,14 @@ Se tiene que cambiar el namespace para el que usen en su proyecto
 */
 namespace MAD
 {
+    //Obtener los datos del usuario que inicio sesion
+    public class Sesion
+    {
+        public static string UsuarioCorreo {  get; set; }
+        public static string UsuarioNombre {  get; set; }
+        public static string TipoUsuario {  get; set; }
+        public static int IdUsuario { get; set; }
+    }
     public class EnlaceDB
     {
         static private string _aux { set; get; }
@@ -183,6 +191,10 @@ namespace MAD
         //                  USUARIOS                      //
 
         //INICIAR SESION * STORE PROCEDURE -> SP_ValidaUser
+
+
+
+
         public bool Autentificar(string uc, string ps)
         {
             bool isValid = false;
@@ -206,7 +218,9 @@ namespace MAD
 
                 if (_tabla.Rows.Count > 0)
                 {
+                    Sesion.UsuarioNombre = _tabla.Rows[0]["nombres"].ToString();
                     isValid = true;
+
                 }
 
             }
@@ -223,15 +237,15 @@ namespace MAD
             return isValid;
         }
 
-      
+
 
 
         //INSERT * STORE PROCEDURE -> SP_GestionDeUsuario
         public bool Add_Users(string opc, string tipoUsuario, string correo, string contra,
-        string nombres, string apellidoP, string apellidoM,string numeroNomina, DateTime fechaNacimiento,
-        string telefono1, string telefono2,string usuarioRegistro, DateTime fechaRegistro, TimeSpan horaRegistro)
+            string nombres, string apellidoP, string apellidoM, string numeroNomina, DateTime fechaNacimiento,
+            string telefono1, string telefono2, string usuarioRegistro, DateTime fechaRegistro, TimeSpan horaRegistro,
+            int idUsuario = 0) // Nuevo parámetro, opcional
         {
-
             var msg = "";
             var add = true;
             try
@@ -242,47 +256,31 @@ namespace MAD
                 _comandosql.CommandType = CommandType.StoredProcedure;
                 _comandosql.CommandTimeout = 1200;
 
-                var parametro1 = _comandosql.Parameters.Add("@Opc", SqlDbType.Char, 1);
-                parametro1.Value = opc;
-                var parametro2 = _comandosql.Parameters.Add("@SP_tipoUsuario", SqlDbType.VarChar, 50);
-                parametro2.Value = tipoUsuario;
-                var parametro3 = _comandosql.Parameters.Add("@SP_correo", SqlDbType.VarChar, 100);
-                parametro3.Value = correo;
-                var parametro4 = _comandosql.Parameters.Add("@SP_contra", SqlDbType.VarChar, 100);
-                parametro4.Value = contra;
-                var parametro5 = _comandosql.Parameters.Add("@SP_nombres", SqlDbType.VarChar, 50);
-                parametro5.Value = nombres;
-                var parametro6 = _comandosql.Parameters.Add("@SP_apellidoPaterno", SqlDbType.VarChar, 50);
-                parametro6.Value = apellidoP;
-                var parametro7 = _comandosql.Parameters.Add("@SP_apellidoMaterno", SqlDbType.VarChar, 50);
-                parametro7.Value = apellidoM;
-                var parametro8 = _comandosql.Parameters.Add("@SP_numeroNomina", SqlDbType.VarChar, 100);
-                parametro8.Value = numeroNomina;
-                var parametro9 = _comandosql.Parameters.Add("@SP_fechaNacimiento", SqlDbType.Date);
-                parametro9.Value = fechaNacimiento;
-                var parametro10 = _comandosql.Parameters.Add("@SP_telefono1", SqlDbType.VarChar, 10);
-                parametro10.Value = telefono1;
-                var parametro11 = _comandosql.Parameters.Add("@SP_telefono2", SqlDbType.VarChar, 10);
-                parametro11.Value = telefono2;
-                var parametro12 = _comandosql.Parameters.Add("@SP_usuarioRegistro", SqlDbType.VarChar, 50);
-                parametro12.Value = usuarioRegistro;
-                var parametro13 = _comandosql.Parameters.Add("@SP_fechaRegistro", SqlDbType.Date);
-                parametro13.Value = fechaRegistro;
-                var parametro14 = _comandosql.Parameters.Add("@SP_horaRegistro", SqlDbType.Time);
-                parametro14.Value = horaRegistro;
+                // Par. de control y PK para UPDATE / DELETE
+                _comandosql.Parameters.Add("@Opc", SqlDbType.Char, 1).Value = opc;
+                _comandosql.Parameters.Add("@SP_idUsuario", SqlDbType.Int).Value = idUsuario;
 
-             
-                _adaptador.InsertCommand = _comandosql;
-                // También se tienen las propiedades del adaptador: UpdateCommand  y DeleteCommand
+                // Parámetros restantes del usuario
+                _comandosql.Parameters.Add("@SP_tipoUsuario", SqlDbType.VarChar, 50).Value = tipoUsuario;
+                _comandosql.Parameters.Add("@SP_correo", SqlDbType.VarChar, 100).Value = correo;
+                _comandosql.Parameters.Add("@SP_contra", SqlDbType.VarChar, 100).Value = contra;
+                _comandosql.Parameters.Add("@SP_nombres", SqlDbType.VarChar, 50).Value = nombres;
+                _comandosql.Parameters.Add("@SP_apellidoPaterno", SqlDbType.VarChar, 50).Value = apellidoP;
+                _comandosql.Parameters.Add("@SP_apellidoMaterno", SqlDbType.VarChar, 50).Value = apellidoM;
+                _comandosql.Parameters.Add("@SP_numeroNomina", SqlDbType.VarChar, 100).Value = numeroNomina;
+                _comandosql.Parameters.Add("@SP_fechaNacimiento", SqlDbType.Date).Value = fechaNacimiento;
+                _comandosql.Parameters.Add("@SP_telefono1", SqlDbType.VarChar, 10).Value = telefono1;
+                _comandosql.Parameters.Add("@SP_telefono2", SqlDbType.VarChar, 10).Value = telefono2;
+                _comandosql.Parameters.Add("@SP_usuarioRegistro", SqlDbType.VarChar, 50).Value = usuarioRegistro;
+                _comandosql.Parameters.Add("@SP_fechaRegistro", SqlDbType.Date).Value = fechaRegistro;
+                _comandosql.Parameters.Add("@SP_horaRegistro", SqlDbType.Time).Value = horaRegistro;
 
                 _comandosql.ExecuteNonQuery();
-
             }
             catch (SqlException e)
             {
                 add = false;
-                msg = "Excepción de base de datos: \n";
-                msg += e.Message;
+                msg = "Excepción de base de datos: \n" + e.Message;
                 MessageBox.Show(msg, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             finally
@@ -292,7 +290,6 @@ namespace MAD
 
             return add;
         }
-
         //SELECT   * STORE PROCEDURE -> SP_GestionDeUsuario
         public DataTable get_User(string opc)
         {

@@ -20,7 +20,6 @@ namespace MAD
 
         private void pIniciarSesion_Load(object sender, EventArgs e)
         {
-
         }
 
         private void b_IniciarSesion_Click(object sender, EventArgs e)
@@ -37,12 +36,14 @@ namespace MAD
             }
             //Buscamos si existe en la base de datos
             EnlaceDB enlace = new EnlaceDB();
+
             bool validarCredencial = enlace.Autentificar(UsuarioCorreo, UsuarioContraseña);
 
             if (validarCredencial)
             {
                 MessageBox.Show("Bienvenido, acceso concedido", "Iniciar sesion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                string nombre = Sesion.UsuarioNombre;
                 //Aquí puedes abrir el siguiente formulario y cerrar el login si deseas:
                 menuPrincipal menu = new menuPrincipal();
                 menu.Show();

@@ -56,6 +56,7 @@
             this.dGridV_RegUsuario.RowHeadersWidth = 51;
             this.dGridV_RegUsuario.Size = new System.Drawing.Size(791, 458);
             this.dGridV_RegUsuario.TabIndex = 51;
+            this.dGridV_RegUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridV_RegUsuario_CellContentClick);
             // 
             // tB_RegistradoPor
             // 
@@ -64,8 +65,9 @@
             this.tB_RegistradoPor.Margin = new System.Windows.Forms.Padding(4);
             this.tB_RegistradoPor.Name = "tB_RegistradoPor";
             this.tB_RegistradoPor.ReadOnly = true;
-            this.tB_RegistradoPor.Size = new System.Drawing.Size(248, 25);
+            this.tB_RegistradoPor.Size = new System.Drawing.Size(248, 21);
             this.tB_RegistradoPor.TabIndex = 50;
+            this.tB_RegistradoPor.TextChanged += new System.EventHandler(this.tB_RegistradoPor_TextChanged);
             // 
             // b_elimUsu
             // 
@@ -93,6 +95,7 @@
             this.b_editUsu.TabIndex = 47;
             this.b_editUsu.Text = "Editar";
             this.b_editUsu.UseVisualStyleBackColor = true;
+            this.b_editUsu.Click += new System.EventHandler(this.b_editUsu_Click);
             // 
             // b_regUsu
             // 
@@ -114,7 +117,7 @@
             this.dTP_fNacReg.Location = new System.Drawing.Point(13, 412);
             this.dTP_fNacReg.Margin = new System.Windows.Forms.Padding(4);
             this.dTP_fNacReg.Name = "dTP_fNacReg";
-            this.dTP_fNacReg.Size = new System.Drawing.Size(248, 22);
+            this.dTP_fNacReg.Size = new System.Drawing.Size(248, 20);
             this.dTP_fNacReg.TabIndex = 45;
             // 
             // tB_numNomina
@@ -123,7 +126,7 @@
             this.tB_numNomina.Location = new System.Drawing.Point(13, 368);
             this.tB_numNomina.Margin = new System.Windows.Forms.Padding(4);
             this.tB_numNomina.Name = "tB_numNomina";
-            this.tB_numNomina.Size = new System.Drawing.Size(248, 25);
+            this.tB_numNomina.Size = new System.Drawing.Size(248, 21);
             this.tB_numNomina.TabIndex = 43;
             // 
             // tB_tCasaReg
@@ -132,7 +135,7 @@
             this.tB_tCasaReg.Location = new System.Drawing.Point(13, 335);
             this.tB_tCasaReg.Margin = new System.Windows.Forms.Padding(4);
             this.tB_tCasaReg.Name = "tB_tCasaReg";
-            this.tB_tCasaReg.Size = new System.Drawing.Size(248, 25);
+            this.tB_tCasaReg.Size = new System.Drawing.Size(248, 21);
             this.tB_tCasaReg.TabIndex = 41;
             // 
             // tB_tCelReg
@@ -141,7 +144,7 @@
             this.tB_tCelReg.Location = new System.Drawing.Point(13, 291);
             this.tB_tCelReg.Margin = new System.Windows.Forms.Padding(4);
             this.tB_tCelReg.Name = "tB_tCelReg";
-            this.tB_tCelReg.Size = new System.Drawing.Size(248, 25);
+            this.tB_tCelReg.Size = new System.Drawing.Size(248, 21);
             this.tB_tCelReg.TabIndex = 39;
             // 
             // tB_CorreoReg
@@ -150,7 +153,7 @@
             this.tB_CorreoReg.Location = new System.Drawing.Point(13, 258);
             this.tB_CorreoReg.Margin = new System.Windows.Forms.Padding(4);
             this.tB_CorreoReg.Name = "tB_CorreoReg";
-            this.tB_CorreoReg.Size = new System.Drawing.Size(248, 25);
+            this.tB_CorreoReg.Size = new System.Drawing.Size(248, 21);
             this.tB_CorreoReg.TabIndex = 37;
             this.tB_CorreoReg.TextChanged += new System.EventHandler(this.tB_CorreoReg_TextChanged);
             // 
@@ -160,7 +163,7 @@
             this.tB_ContraReg.Location = new System.Drawing.Point(13, 213);
             this.tB_ContraReg.Margin = new System.Windows.Forms.Padding(4);
             this.tB_ContraReg.Name = "tB_ContraReg";
-            this.tB_ContraReg.Size = new System.Drawing.Size(248, 25);
+            this.tB_ContraReg.Size = new System.Drawing.Size(248, 21);
             this.tB_ContraReg.TabIndex = 35;
             // 
             // tB_tUsuarioReg
@@ -169,7 +172,7 @@
             this.tB_tUsuarioReg.Location = new System.Drawing.Point(13, 180);
             this.tB_tUsuarioReg.Margin = new System.Windows.Forms.Padding(4);
             this.tB_tUsuarioReg.Name = "tB_tUsuarioReg";
-            this.tB_tUsuarioReg.Size = new System.Drawing.Size(248, 25);
+            this.tB_tUsuarioReg.Size = new System.Drawing.Size(248, 21);
             this.tB_tUsuarioReg.TabIndex = 33;
             // 
             // tB_AmReg
@@ -178,7 +181,7 @@
             this.tB_AmReg.Location = new System.Drawing.Point(13, 141);
             this.tB_AmReg.Margin = new System.Windows.Forms.Padding(4);
             this.tB_AmReg.Name = "tB_AmReg";
-            this.tB_AmReg.Size = new System.Drawing.Size(248, 25);
+            this.tB_AmReg.Size = new System.Drawing.Size(248, 21);
             this.tB_AmReg.TabIndex = 31;
             // 
             // tB_ApReg
@@ -187,7 +190,7 @@
             this.tB_ApReg.Location = new System.Drawing.Point(13, 99);
             this.tB_ApReg.Margin = new System.Windows.Forms.Padding(4);
             this.tB_ApReg.Name = "tB_ApReg";
-            this.tB_ApReg.Size = new System.Drawing.Size(248, 25);
+            this.tB_ApReg.Size = new System.Drawing.Size(248, 21);
             this.tB_ApReg.TabIndex = 29;
             // 
             // tB_NombresReg
@@ -196,7 +199,7 @@
             this.tB_NombresReg.Location = new System.Drawing.Point(13, 66);
             this.tB_NombresReg.Margin = new System.Windows.Forms.Padding(4);
             this.tB_NombresReg.Name = "tB_NombresReg";
-            this.tB_NombresReg.Size = new System.Drawing.Size(248, 25);
+            this.tB_NombresReg.Size = new System.Drawing.Size(248, 21);
             this.tB_NombresReg.TabIndex = 27;
             // 
             // usuarios

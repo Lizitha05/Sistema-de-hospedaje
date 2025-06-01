@@ -42,8 +42,8 @@ INSERT INTO Usuario (
     'juan.perez@example.com',
     'contrasena123',
     'Juan',
-    'Pérez',
-    'López',
+    'Pï¿½rez',
+    'Lï¿½pez',
     'A123456789',
     '1990-05-15',
     '5551234567',
@@ -212,3 +212,8 @@ ALTER COLUMN numeroHabitaciones INT NOT NULL;
 ALTER TABLE ReservaDetalle
 ALTER COLUMN numeroHuespedesTotal INT NOT NULL;
 
+
+
+
+--laura.garcia@example.com
+--ContraSegura2025!

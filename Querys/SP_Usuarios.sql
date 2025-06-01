@@ -1,9 +1,8 @@
 ﻿--ESTE QUERY ES ESPECIFICAMENTE PARA PROCEDURES DE LOS USUARIOS 🗣🗣🗣
-
 --INICIAR SESION
 --Declaramos el procedure
 CREATE PROCEDURE SP_ValidaUser 
---Variables que va a recibir el el procedure, en este caso:
+--Variables que va a recibir el procedure, en este caso:
 --Correo
 --Contraseña
 @SP_Correo VARCHAR(100),
@@ -12,12 +11,14 @@ AS
 BEGIN
 
 --DML usamos el select para seleccionar la tabla
-SELECT *  --Seleciona la
+SELECT nombres, correo, contra --Seleciona la
 FROM --Tabla de
 Usuario --NombreTabla
 WHERE  correo = @SP_Correo AND contra = @SP_Contraseña ;--Donde 
 
 END
+
+
 
 --GESTION DE USUARIOS , select, insert, update , delete
 
