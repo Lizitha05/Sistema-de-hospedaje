@@ -1,6 +1,10 @@
 ﻿--ESTE QUERY ES ESPECIFICAMENTE PARA PROCEDURES DE LOS USUARIOS 🗣🗣🗣
 --INICIAR SESION
 --Declaramos el procedure
+GO
+USE BD_Hotels1
+GO
+
 CREATE PROCEDURE SP_ValidaUser 
 --Variables que va a recibir el procedure, en este caso:
 --Correo
@@ -98,3 +102,55 @@ WHERE idUsuario = @SP_idUsuario  --Donde la llave sea igua a id usuario
 END --Finaliza
 
 END
+
+CREATE VIEW VW_UsuariosActivos AS
+SELECT 
+    idUsuario,
+    tipoUsuario,
+    correo,
+    contra, 
+    nombres,
+    apellidoPaterno,
+    apellidoMaterno,
+    numeroNomina,
+    fechaNacimiento,
+    telefono1,
+    telefono2,
+    usuarioRegistro,
+    fechaRegistro,
+    horaRegistro
+FROM Usuario
+WHERE Activo = 1;
+
+
+INSERT INTO Usuario (
+    tipoUsuario,
+    correo,
+    contra,
+    nombres,
+    apellidoPaterno,
+    apellidoMaterno,
+    numeroNomina,
+    fechaNacimiento,
+    telefono1,
+    telefono2,
+    usuarioRegistro,
+    fechaRegistro,
+    horaRegistro,
+    Activo
+) VALUES (
+    'Recepcionista',                         -- tipoUsuario
+    'laura.garcia@example.com',              -- correo
+    'ContraSegura2025!',                     -- contra
+    'Laura',                                 -- nombres
+    'García',                                -- apellidoPaterno
+    'Martínez',                              -- apellidoMaterno
+    'EMP009876',                             -- numeroNomina
+    '1995-03-20',                            -- fechaNacimiento
+    '5559876543',                            -- telefono1
+    NULL,                                    -- telefono2 (puede ser NULL)
+    'admin',                                 -- usuarioRegistro
+    GETDATE(),                               -- fechaRegistro (usa la fecha actual del servidor)
+    CONVERT(TIME, GETDATE()),                -- horaRegistro
+    1                                        -- Activo
+);

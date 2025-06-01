@@ -1,22 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Silver\\Documents\\GitHub\\Sistema-de-hospedaje\\MADv0.4\\",
+  "WorkspaceRootPath": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|c:\\users\\silver\\documents\\github\\sistema-de-hospedaje\\madv0.4\\mad\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|c:\\users\\silver\\desktop\\sistema-de-hospedaje\\madv0.4\\mad\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|solutionrelative:mad\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|c:\\users\\silver\\documents\\github\\sistema-de-hospedaje\\madv0.4\\mad\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|c:\\users\\silver\\desktop\\sistema-de-hospedaje\\madv0.4\\mad\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|solutionrelative:mad\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|c:\\users\\silver\\desktop\\sistema-de-hospedaje\\madv0.4\\mad\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|solutionrelative:mad\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\mad\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|solutionrelative:mad\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|c:\\users\\silver\\documents\\github\\sistema-de-hospedaje\\madv0.4\\mad\\usuarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|solutionrelative:mad\\usuarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\mad\\enlacedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|solutionrelative:mad\\enlacedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|c:\\users\\silver\\documents\\github\\sistema-de-hospedaje\\madv0.4\\mad\\enlacedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|solutionrelative:mad\\enlacedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|c:\\users\\silver\\desktop\\sistema-de-hospedaje\\madv0.4\\mad\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|solutionrelative:mad\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\mad\\usuarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B936B597-56BF-44F4-9DEC-3BDA1A80337E}|MAD\\MAD.csproj|solutionrelative:mad\\usuarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,28 +38,79 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\usuarios.cs",
+              "RelativeDocumentMoniker": "MAD\\usuarios.cs",
+              "ToolTip": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\usuarios.cs",
+              "RelativeToolTip": "MAD\\usuarios.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T03:14:05.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "menuPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\menuPrincipal.cs",
+              "RelativeDocumentMoniker": "MAD\\menuPrincipal.cs",
+              "ToolTip": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\menuPrincipal.cs",
+              "RelativeToolTip": "MAD\\menuPrincipal.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T22:53:26.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "menuPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\menuPrincipal.cs",
+              "RelativeDocumentMoniker": "MAD\\menuPrincipal.cs",
+              "ToolTip": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\menuPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "MAD\\menuPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T22:53:24.9Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "EnlaceDB.cs",
-              "DocumentMoniker": "C:\\Users\\Silver\\Documents\\GitHub\\Sistema-de-hospedaje\\MADv0.4\\MAD\\EnlaceDB.cs",
+              "DocumentMoniker": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\EnlaceDB.cs",
               "RelativeDocumentMoniker": "MAD\\EnlaceDB.cs",
-              "ToolTip": "C:\\Users\\Silver\\Documents\\GitHub\\Sistema-de-hospedaje\\MADv0.4\\MAD\\EnlaceDB.cs",
+              "ToolTip": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\EnlaceDB.cs",
               "RelativeToolTip": "MAD\\EnlaceDB.cs",
-              "ViewState": "AgIAAOEAAAAAAAAAAAAkwPMAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAswPsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T04:45:39.663Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\App.config",
+              "RelativeDocumentMoniker": "MAD\\App.config",
+              "ToolTip": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\App.config",
+              "RelativeToolTip": "MAD\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-06-01T22:41:30.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "usuarios.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Silver\\Documents\\GitHub\\Sistema-de-hospedaje\\MADv0.4\\MAD\\usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\usuarios.cs",
               "RelativeDocumentMoniker": "MAD\\usuarios.cs",
-              "ToolTip": "C:\\Users\\Silver\\Documents\\GitHub\\Sistema-de-hospedaje\\MADv0.4\\MAD\\usuarios.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\usuarios.cs [Dise\u00F1o]",
               "RelativeToolTip": "MAD\\usuarios.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T04:12:07.529Z",
@@ -55,24 +118,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "usuarios.cs",
-              "DocumentMoniker": "C:\\Users\\Silver\\Documents\\GitHub\\Sistema-de-hospedaje\\MADv0.4\\MAD\\usuarios.cs",
-              "RelativeDocumentMoniker": "MAD\\usuarios.cs",
-              "ToolTip": "C:\\Users\\Silver\\Documents\\GitHub\\Sistema-de-hospedaje\\MADv0.4\\MAD\\usuarios.cs",
-              "RelativeToolTip": "MAD\\usuarios.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAmwDcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T03:14:05.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "usuarios.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Silver\\Documents\\GitHub\\Sistema-de-hospedaje\\MADv0.4\\MAD\\usuarios.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\usuarios.Designer.cs",
               "RelativeDocumentMoniker": "MAD\\usuarios.Designer.cs",
-              "ToolTip": "C:\\Users\\Silver\\Documents\\GitHub\\Sistema-de-hospedaje\\MADv0.4\\MAD\\usuarios.Designer.cs",
+              "ToolTip": "C:\\Users\\Silver\\Desktop\\Sistema-de-hospedaje\\MADv0.4\\MAD\\usuarios.Designer.cs",
               "RelativeToolTip": "MAD\\usuarios.Designer.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

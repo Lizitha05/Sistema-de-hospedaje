@@ -1,8 +1,8 @@
 --Hecho por alberto
 -- Crear base de datos y usarla
---CREATE DATABASE BD_Hotels;
+--CREATE DATABASE BD_Hotels1;
 GO
-USE BD_Hotels;
+USE BD_Hotels1;
 GO
 
 -- Tabla Usuario

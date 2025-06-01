@@ -238,6 +238,28 @@ namespace MAD
         }
 
 
+        public DataTable Get_UsuariosActivos()
+        {
+            DataTable tabla = new DataTable();
+            try
+            {
+                conectar();
+                string qry = "SELECT * FROM VW_UsuariosActivos";
+                _comandosql = new SqlCommand(qry, _conexion);
+                _comandosql.CommandType = CommandType.Text;
+                _adaptador.SelectCommand = _comandosql;
+                _adaptador.Fill(tabla);
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show("Error al obtener usuarios activos: " + e.Message);
+            }
+            finally
+            {
+                desconectar();
+            }
+            return tabla;
+        }
 
 
         //INSERT * STORE PROCEDURE -> SP_GestionDeUsuario

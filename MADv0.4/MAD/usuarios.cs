@@ -8,23 +8,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MAD.Resources;
 
 namespace MAD
 {
     public partial class usuarios : Form
     {
+
+        private void LimpiarCampos()
+        {
+            tB_NombresReg.Clear();
+            tB_ApReg.Clear();
+            tB_AmReg.Clear();
+            tB_tUsuarioReg.Clear();
+            tB_ContraReg.Clear();
+            tB_CorreoReg.Clear();
+            tB_tCelReg.Clear();
+            tB_tCasaReg.Clear();
+            tB_numNomina.Clear();
+            dTP_fNacReg.Value = DateTime.Today;
+            tB_RegistradoPor.Text = Sesion.UsuarioNombre; // Vuelve a cargar el usuario que está logueado
+            idUsuarioSeleccionado = -1;
+            b_regUsu.Enabled = true;
+        }
+
         private int idUsuarioSeleccionado = -1;
         public usuarios()
         {
             InitializeComponent();
+            this.FormClosed += usuarios_FormClosed;
         }
-
+        private void usuarios_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            menuPrincipal menu = new menuPrincipal();
+            menu.Show();
+        }
         private void usuarios_Load(object sender, EventArgs e)
         {
             tB_RegistradoPor.Text = Sesion.UsuarioNombre;
             EnlaceDB enlace = new EnlaceDB();
-            dGridV_RegUsuario.DataSource = enlace.get_User("S");
-            DataTable tablaUsuarios = enlace.get_User("S");
+            dGridV_RegUsuario.DataSource = enlace.Get_UsuariosActivos();
+            //DataTable tablaUsuarios = enlace.get_User("S");
+            LimpiarCampos();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -53,6 +78,7 @@ namespace MAD
                 {
                     MessageBox.Show("Error al desactivar usuario.");
                 }
+                LimpiarCampos();
             }
         }
 
@@ -63,8 +89,8 @@ namespace MAD
 
         //Registrar
         private void b_regUsu_Click(object sender, EventArgs e)
-        {
 
+        {
             // Recolectar datos del formulario...
             string opc = "I";
             string tipoUsuario = tB_tUsuarioReg.Text;
@@ -89,14 +115,15 @@ namespace MAD
             if (Registro)
             {
                 MessageBox.Show("Usuario registrado con éxito.");
-                dGridV_RegUsuario.DataSource = enlace.get_User("S");
+                dGridV_RegUsuario.DataSource = enlace.Get_UsuariosActivos();
+
 
             }
             else
             {
                 MessageBox.Show("Error al registrar usuario.");
             }
-
+                LimpiarCampos();
 
         }
 
@@ -111,12 +138,8 @@ namespace MAD
             {
                 DataGridViewRow fila = dGridV_RegUsuario.Rows[e.RowIndex];
 
-                string nombre = fila.Cells["nombres"].Value.ToString();
-                tB_NombresReg.Text = nombre;
-
-                string tipoUsuario = fila.Cells["tipoUsuario"].Value.ToString();
-                tB_tUsuarioReg.Text = tipoUsuario;
-
+                // Cargar todos los campos requeridos
+                tB_NombresReg.Text = fila.Cells["nombres"].Value.ToString();
                 tB_ApReg.Text = fila.Cells["apellidoPaterno"].Value.ToString();
                 tB_AmReg.Text = fila.Cells["apellidoMaterno"].Value.ToString();
                 tB_tUsuarioReg.Text = fila.Cells["tipoUsuario"].Value.ToString();
@@ -127,7 +150,10 @@ namespace MAD
                 tB_numNomina.Text = fila.Cells["numeroNomina"].Value.ToString();
                 dTP_fNacReg.Value = Convert.ToDateTime(fila.Cells["fechaNacimiento"].Value);
                 tB_RegistradoPor.Text = fila.Cells["usuarioRegistro"].Value.ToString();
+
+                // Guardar el ID del usuario para edición/eliminación
                 idUsuarioSeleccionado = Convert.ToInt32(fila.Cells["idUsuario"].Value);
+                b_regUsu.Enabled = false;
             }
         }
 
@@ -162,12 +188,13 @@ namespace MAD
             if (actualizado)
             {
                 MessageBox.Show("Usuario actualizado.");
-                dGridV_RegUsuario.DataSource = enlace.get_User("S");
+                dGridV_RegUsuario.DataSource = enlace.Get_UsuariosActivos();
             }
             else
             {
                 MessageBox.Show("Error al actualizar usuario.");
             }
+                LimpiarCampos();
         }
     }
 }
